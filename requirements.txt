@@ -1,3 +1,4 @@
 Django>=4.2
 django-appconf==1.0.*
+djangorestframework>=3.14,<3.15
 pathvalidate==3.0.*

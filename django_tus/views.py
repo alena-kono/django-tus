@@ -3,7 +3,8 @@ import logging
 
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
-from django.views.generic import View
+
+from rest_framework.views import APIView
 
 from pathvalidate import is_valid_filename
 
@@ -17,7 +18,7 @@ logger = logging.getLogger(__name__)
 TUS_SETTINGS = {}
 
 
-class TusUpload(View):
+class TusUpload(APIView):
     on_finish = None
 
     @method_decorator(csrf_exempt)
